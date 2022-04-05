@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="style.js">
+	<title>Document</title>
+</head>
+
+
+<body>
+  <h1>Registration form</h1>
+  <div class="form-container">
+    <form name="registerForm">
+		<table width="886" border="0" cellspacing="2" cellpadding="2">
+		<tr><td>
+      <label for="firstName">First Name *</label>
+      <input type="text" id="firstName" name="firstName" placeholder="Sana" required/><p class="error-message"></p></td>
+       <td> <label for="lastName">Last Name *</label>
+      <input type="text" id="lastName" placeholder="Qureshi" required/>
+      <p class="error-message"></p></td>
+	  </tr>
+	  <tr>
+      <td><label for="e-mail">E-mail address *</label>
+      <input type="text" id="e-mail" placeholder="sana@gmail.com" required/>
+      <p class="error-message"></p></td>
+      <td><label for="phoneNumber">Phone Number</label>
+      <input type="text" id="phoneNumber" maxlength="10" pattern=".{9,}"   required title="10 characters length"placeholder="98********"/>
+      <p class="error-message"></p></td></tr>
+	  <tr>
+		<td>
+      <label for="country">Country</label>
+      <input type="text" id="country" placeholder="India"/>
+      <p class="error-message"></p></td>
+	  <td>
+      <label for="password">Password *</label>
+      <input type="password" id="password" pattern=".{8,}"   required title="8 characters minimum"/>
+      <p class="error-message"></p>
+      <p class="password-rules">Your password should contain at least 8 characters and 1 number.</p>
+      <div class="radio-question"></td></tr>
+		<tr><td>
+        <p>Your Branch </p>
+        <form>
+        <input class="radio-input" type="radio" name="media" value="CSE" /> CSE <br>
+        <input class="radio-input" type="radio" name="media" value="IT" /> IT <br>
+         <input class="radio-input" type="radio" name="media" value="EE" /> EE <br>
+         <input class="radio-input" type="radio" name="media" value="Civil" /> Civil <br>
+        </div>
+		<td>
+        <input class="button" type="submit" value="submit" name="submit" onClick="formValidation()" />
+	</td></tr></table>
+     </form>
+  </div>
+</body>
+</html>
